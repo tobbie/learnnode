@@ -7,10 +7,10 @@ http.createServer(function(req, res){
     if(req.url === '/')
     {
         res.writeHead(200, {'Content-Type': 'text/html'});
-     var html = fs.readFileSync(__dirname +'/index.html', 'utf8');
-     var message = 'sample text';
-    html = html.replace('{message}', message);
-     res.end(html);
+        var html = fs.readFileSync(__dirname +'/index.html', 'utf8');
+        var message = 'sample text';
+        html = html.replace('{message}', message);
+        res.end(html);
 
     }
     else if(req.url === '/api'){
